@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:24:43 by amaquena          #+#    #+#             */
-/*   Updated: 2019/05/21 14:58:57 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/05/21 16:30:49 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 //memcmp;
 size_t	ft_strlen(const char *s);
 char	*ft_strdup(const char *s1);
-//strcpy;
+char	*ft_strcpy(char *dst, const char *src);
 //strncpy;
 //strcat;
 //strncat;

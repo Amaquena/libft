@@ -6,13 +6,13 @@
 #    By: event <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/20 10:32:53 by event             #+#    #+#              #
-#    Updated: 2019/05/21 14:59:01 by amaquena         ###   ########.fr        #
+#    Updated: 2019/05/21 15:48:43 by amaquena         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-CFILES = ft_strlen.c ft_strdup.c
-OFILES = ft_strlen.o ft_strdup.o
+CFILES = ft_strlen.c ft_strdup.c ft_strcpy.c
+OFILES = ft_strlen.o ft_strdup.o ft_strcpy.o
 
 $(NAME):
 	gcc -c -Wall -Wextra -Werror $(CFILES)
