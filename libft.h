@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:24:43 by amaquena          #+#    #+#             */
-/*   Updated: 2019/05/21 12:26:35 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/05/21 14:58:57 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <string.h>
 # include <unistd.h>
+# include <stdlib.h>
 
 //memset;
 //bzero;
@@ -23,7 +24,7 @@
 //memchr;
 //memcmp;
 size_t	ft_strlen(const char *s);
-//strdup;
+char	*ft_strdup(const char *s1);
 //strcpy;
 //strncpy;
 //strcat;
