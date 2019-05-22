@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:24:43 by amaquena          #+#    #+#             */
-/*   Updated: 2019/05/22 10:26:36 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/05/22 13:05:02 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strdup(const char *s1);
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
 char	*ft_strcat(char *s1, const char *s2);
-//strncat;
+char	*ft_strncat(char *s1, const char *s2, size_t n);
 //strchr;
 //strrchr;
 //strstr;
