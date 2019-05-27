@@ -6,17 +6,26 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 15:34:21 by amaquena          #+#    #+#             */
-/*   Updated: 2019/05/24 16:30:52 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/05/27 10:57:10 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.c"
+#include "libft.h"
 
-char	*strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int i;
+	size_t i;
 	unsigned char chr;
 
-	i = ft_strlen(s) - 1;
-	return ();
+	i = ft_strlen(s);
+	s += i;
+	chr = c;
+	while (i > 0)
+	{
+		if (*s == chr)
+			return ((char*)s);
+		s--;
+		i--;
+	}
+	return (NULL);
 }
