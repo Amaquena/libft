@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 09:20:29 by amaquena          #+#    #+#             */
-/*   Updated: 2019/05/28 10:28:09 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/05/28 10:30:52 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	char *chr = b;
+	char *chr;
+
+	chr = b;
 	while (len > 0)
 	{
 		*chr = c;
