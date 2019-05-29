@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:24:43 by amaquena          #+#    #+#             */
-/*   Updated: 2019/05/28 15:19:54 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/05/29 17:09:34 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,14 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+/* Part 1 */
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
-//memmove;
-//memchr;
-//memcmp;
+void	*ft_memmove(void *dst, const void *src, size_t len);
+void	*ft_memchr(const void *s, int c, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t	ft_strlen(const char *s);
 char	*ft_strdup(const char *s1);
 char	*ft_strcpy(char *dst, const char *src);
@@ -44,5 +45,31 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+
+/* Part 2 */
+void	*ft_memalloc(size_t size);
+void	ft_memdel(void **ap);
+char	*ft_strnew(size_t size);
+//ft_strdel
+//ft_strclr
+//ft_striter
+//ft_striteri
+//ft_strmap
+//ft_strmapi
+//ft_strequ
+//ft_strnequ
+//ft_strsub
+//ft_ strjoin
+//ft_strtrim
+//ft_strsplit
+//ft_itoa
+//ft_putchar
+//ft_putstr
+//ft_putendl
+//ft_putnbr
+//ft_putchar_fd
+//ft_putstr_fd
+//ft_putendl_fd
+//ft_putnbr_fd0
 
 #endif
