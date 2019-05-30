@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:24:43 by amaquena          #+#    #+#             */
-/*   Updated: 2019/05/29 17:09:34 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/05/30 16:31:22 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,13 +50,13 @@ int		ft_tolower(int c);
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
 char	*ft_strnew(size_t size);
-//ft_strdel
-//ft_strclr
-//ft_striter
-//ft_striteri
-//ft_strmap
-//ft_strmapi
-//ft_strequ
+void	ft_strdel(char **as);
+void	ft_strclr(char *s);
+void	ft_striter(char *s, void (*f)(char*));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+char	*ft_strmap(char const *s, char (*f)(char));
+char	*ft_strmapi(char *s, char (*f)(unsigned int, char));
+int		ft_strequ(char const *s1, char const *s2);
 //ft_strnequ
 //ft_strsub
 //ft_ strjoin
@@ -70,6 +70,6 @@ char	*ft_strnew(size_t size);
 //ft_putchar_fd
 //ft_putstr_fd
 //ft_putendl_fd
-//ft_putnbr_fd0
+//ft_putnbr_fd
 
 #endif
