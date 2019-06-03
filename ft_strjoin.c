@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 13:11:42 by amaquena          #+#    #+#             */
-/*   Updated: 2019/05/31 13:38:35 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/06/03 14:45:29 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if ((!s1 || !s2) || !(str = ft_strnew(ft_strlen(s1) + ft_strlen(s2))))
 			return (NULL);
-	str = strcpy(str, s1);
+	str = ft_strcpy(str, s1);
 	if (!(str = ft_strcat((char *)str, (char *)s2)))
 		return (NULL);
 	else
