@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 10:45:37 by amaquena          #+#    #+#             */
-/*   Updated: 2019/05/29 11:06:39 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/06/04 11:58:24 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (NULL);
 	chrdst = (char *)dst;
 	chrsrc = (char *)src;
-	while ( len > 0 )
+	while (len > 0)
 	{
 		*chrdst = *chrsrc;
 		chrdst++;
