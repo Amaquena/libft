@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 13:44:03 by amaquena          #+#    #+#             */
-/*   Updated: 2019/05/31 16:21:48 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/06/06 16:04:37 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,32 @@
 
 char	*ft_strtrim(char const *s)
 {
+	size_t end;
+	size_t start;
+	size_t n;
 	char *str;
-	int start;
-	int end;
-	int i;
 
+	if (!s)
+		return (NULL);
 	start = 0;
-	end = ft_strlen(s);
-	while (s[start] == ' ' || s[start] == '\t' || s[start] == '\n')
-		start++;
-	while(s[end] == ' ' || s[end] == '\t' || s[end] == '\n')
-		end--;
-	if(!(str = ft_strnew(end - start)))
-				return (NULL);
-	i = 0;
-	while (start < end)
+	while (ft_isspace(s[start]))
 	{
-		str[i] = s[start];
-		i++;
 		start++;
+		if (s[start] == '\0')
+			return ("");
 	}
+	end = ft_strlen(s) - 1;
+	while (ft_isspace(s[end]))
+			end--;
+	if (!(str = ft_strnew(end - start + 1)))
+			return (NULL);
+	n = 0;
+	while (start < end + 1)
+	{
+		str[n] = s[start];
+		start++;
+		n++;
+	}
+	str[n] = '\0';
 	return (str);
 }
