@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:24:43 by amaquena          #+#    #+#             */
-/*   Updated: 2019/05/31 15:12:46 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/06/06 17:11:39 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+# define INT_MIN -2147483648
+# define INT_MAX 2147483647
 
 /* Part 1 */
 void	*ft_memset(void *b, int c, size_t len);
@@ -62,13 +64,17 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
 //ft_strsplit
-//ft_itoa
-//ft_putchar
-//ft_putstr
-//ft_putendl
-//ft_putnbr
-//ft_putchar_fd
-//ft_putstr_fd
-//ft_putendl_fd
-//ft_putnbr_fd
+char	*ft_itoa(int n);
+void	ft_putchar(char c);
+void	ft_putstr(const char *str);
+void	ft_putendl(const char *str);
+void	ft_putnbr(int n);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(const char *str, int fd);
+void	ft_putendl_fd(const char *str, int fd);
+void	ft_putnbr_fd(int n, int fd);
+
+/*	Extra Functions */
+int		ft_isspace(char c);
+int		ft_numlen( char c);
 #endif
