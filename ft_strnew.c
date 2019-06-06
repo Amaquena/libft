@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 17:10:10 by amaquena          #+#    #+#             */
-/*   Updated: 2019/05/29 17:24:02 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/06/06 16:02:04 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strnew(size_t size)
 	char *str;
 	size_t i;
 
-	str = malloc(size + 1);
+	str = (char *)malloc(sizeof(char) * (size + 1));
 	if (!str)
 		return (NULL);
 	i = 0;
