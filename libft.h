@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:24:43 by amaquena          #+#    #+#             */
-/*   Updated: 2019/06/06 17:11:39 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/06/07 16:10:32 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
-//ft_strsplit
+char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
 void	ft_putchar(char c);
 void	ft_putstr(const char *str);
@@ -76,5 +76,5 @@ void	ft_putnbr_fd(int n, int fd);
 
 /*	Extra Functions */
 int		ft_isspace(char c);
-int		ft_numlen( char c);
+int		ft_numlen(int c);
 #endif
