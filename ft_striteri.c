@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 12:55:13 by amaquena          #+#    #+#             */
-/*   Updated: 2019/05/30 13:12:02 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/06/10 16:27:20 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	char *str;
-	unsigned int i;
+	char			*str;
+	unsigned int	i;
 
 	str = s;
 	i = 0;

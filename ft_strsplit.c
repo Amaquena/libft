@@ -6,20 +6,11 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 16:11:53 by amaquena          #+#    #+#             */
-/*   Updated: 2019/06/10 14:34:24 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/06/10 17:10:36 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static void	ft_freetab(char **tab, int pos)
-{
-	int i;
-
-	i = -1;
-	while (++i < pos)
-		free(tab[i]);
-}
 
 static int		ft_wordcount(char const *str, char c)
 {
@@ -40,7 +31,7 @@ static int		ft_wordcount(char const *str, char c)
 	return (count);
 }
 
-static int	ft_wordlen(char const *str, char c, int wdpos)
+static int		ft_wordlen(char const *str, char c, int wdpos)
 {
 	int count;
 
@@ -53,55 +44,40 @@ static int	ft_wordlen(char const *str, char c, int wdpos)
 	return (count);
 }
 
-char		**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
-    int i;
-    int j;
-    int k;
-    int wlen;
-    int wcount;
-    char **str;
-    
-    wcount = ft_wordcount(s,c);
-    if ( !c || !s || !(str = (char **)malloc(sizeof(char *) * wcount)))
-        return (NULL);
-    i = 0;
-    j = 0;
-    while (s[i] != '\0')
-    {
-        while (s[i] == c)
-            i++;
-        wlen = ft_wordlen(s, c, i);
-        while (j < wcount && s[i] != c)
-        {
-            if (!c || !s || !(str[j] = (char *)malloc(sizeof(char) * wlen + 1)))
-			{
-				ft_freetab(str, j);
-				free(str);
-                return (NULL);
-			}
-            k = 0;
-            while (wlen > 0)
-            {
-                str[j][k] = s[i];
-                k++;
-                i++;
-                wlen--;
-            }
-            str[j][k] = '\0';
-            j++;
-        }
-    }
-    return (str);
-}
-/*
-int main (void)
-{
-	wc = 0;
-	int	wl = 0;
-	char *a = "*Hello**fellow**student*";
+	int		i;
+	int		j;
+	int		k;
+	int		wlen;
+	int		wcount;
+	char	**str;
 
-	wc = ft_wordcount(a,'l');
-	wl = ft_wordlen(a, '*', 16);
-	printf("%d", wl);
-}*/
+	wcount = ft_wordcount(s, c);
+	if (!c || !s || !(str = (char **)malloc(sizeof(char *) * wcount)))
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s[i] != '\0')
+	{
+		while (s[i] == c)
+			i++;
+		wlen = ft_wordlen(s, c, i);
+		while (j < wcount && s[i] != c)
+		{
+			if (!c || !s || !(str[j] = (char *)malloc(sizeof(char) * wlen + 1)))
+				return (NULL);
+			k = 0;
+			while (wlen > 0)
+			{
+				str[j][k] = s[i];
+				k++;
+				i++;
+				wlen--;
+			}
+			str[j][k] = '\0';
+			j++;
+		}
+	}
+	return (str);
+}

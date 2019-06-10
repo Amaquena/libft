@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 09:39:38 by amaquena          #+#    #+#             */
-/*   Updated: 2019/05/31 10:48:05 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/06/10 16:54:14 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
 	if (!s1 || !s2)
-			return (0);
+		return (0);
 	while (*s1 && *s2 && n)
 	{
 		if (*s1 != *s2)

@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 15:34:21 by amaquena          #+#    #+#             */
-/*   Updated: 2019/06/05 11:50:47 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/06/10 16:23:19 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int end;
-	unsigned char chr;
+	int				end;
+	unsigned char	chr;
 
 	chr = (unsigned char)c;
 	end = ft_strlen(s);

@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 15:36:04 by amaquena          #+#    #+#             */
-/*   Updated: 2019/05/30 16:27:34 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/06/10 16:28:51 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*ft_strmapi(char *s, char (*f)(unsigned int, char))
 {
-	unsigned int i;
-	char *strmem;
-	char *strs;
-	char *memres;
+	unsigned int	i;
+	char			*strmem;
+	char			*strs;
+	char			*memres;
 
 	if (!s || !(memres = ft_memalloc((size_t)ft_strlen((char*)s) + 1)))
 		return (NULL);

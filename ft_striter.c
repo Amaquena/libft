@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 14:40:40 by amaquena          #+#    #+#             */
-/*   Updated: 2019/06/03 14:44:25 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/06/10 16:26:34 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	char *str;
-	unsigned int i;
+	char			*str;
+	unsigned int	i;
 
 	str = s;
 	i = 0;

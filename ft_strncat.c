@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 13:02:53 by amaquena          #+#    #+#             */
-/*   Updated: 2019/06/04 13:35:27 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/06/10 16:21:09 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	char *str1;
-	const char *str2;
+	char		*str1;
+	const char	*str2;
 
 	str1 = s1;
 	str2 = s2;
