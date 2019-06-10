@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:24:43 by amaquena          #+#    #+#             */
-/*   Updated: 2019/06/07 16:10:32 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/06/10 16:34:14 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <stdlib.h>
 # define INT_MIN -2147483648
 # define INT_MAX 2147483647
+typedef struct		s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct	s_list	*next;
+}					t_list;
 
 /* Part 1 */
 void	*ft_memset(void *b, int c, size_t len);
@@ -73,6 +79,9 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(const char *str, int fd);
 void	ft_putendl_fd(const char *str, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+/* Bonus Functions */
+t_list	*ft_lstnew(void const *content, size_t content_size);
 
 /*	Extra Functions */
 int		ft_isspace(char c);
