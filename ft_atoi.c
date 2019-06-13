@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 09:21:53 by amaquena          #+#    #+#             */
-/*   Updated: 2019/06/10 16:23:55 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/06/13 16:26:50 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,10 @@ int		ft_atoi(const char *str)
 	while (ft_isspace(str[i]))
 		i++;
 	sign = 1;
-	if (str[i] == '-')
+	if ((str[i] == '-') || (str[i] == '+'))
 	{
-		sign = -1;
+		if (str[i] == '-')
+			sign = -1;
 		i++;
 	}
 	val = 0;
