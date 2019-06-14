@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 16:11:53 by amaquena          #+#    #+#             */
-/*   Updated: 2019/06/10 17:10:36 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/06/14 16:42:27 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,53 +31,60 @@ static int		ft_wordcount(char const *str, char c)
 	return (count);
 }
 
-static int		ft_wordlen(char const *str, char c, int wdpos)
+static int		ft_wordlen(char const *str, char c)
 {
 	int count;
 
 	count = 0;
-	while (str[wdpos] != c && str[wdpos] != '\0')
+	while (*str != c && *str != '\0')
 	{
 		count++;
-		wdpos++;
+		str++;
 	}
 	return (count);
 }
 
 char			**ft_strsplit(char const *s, char c)
 {
-	int		i;
 	int		j;
 	int		k;
 	int		wlen;
 	int		wcount;
 	char	**str;
 
-	wcount = ft_wordcount(s, c);
-	if (!c || !s || !(str = (char **)malloc(sizeof(char *) * wcount)))
+	if (!s || !c)
 		return (NULL);
-	i = 0;
+	wcount = ft_wordcount(s, c);
+	if (!(str = (char **)malloc(sizeof(char *) * wcount + 1)))
+		return (NULL);
 	j = 0;
-	while (s[i] != '\0')
+	while (*s != '\0')
 	{
-		while (s[i] == c)
-			i++;
-		wlen = ft_wordlen(s, c, i);
-		while (j < wcount && s[i] != c)
+		while (*s == c)
+			s++;
+		wlen = ft_wordlen(s, c);
+		while (j < wcount && *s != c)
 		{
-			if (!c || !s || !(str[j] = (char *)malloc(sizeof(char) * wlen + 1)))
+			if (!(str[j] = (char *)malloc(sizeof(char) * wlen + 1)))
 				return (NULL);
 			k = 0;
-			while (wlen > 0)
-			{
-				str[j][k] = s[i];
-				k++;
-				i++;
-				wlen--;
-			}
-			str[j][k] = '\0';
-			j++;
+			while (wlen-- > 0)
+				str[j][k++] = *s++;
+			str[j++][k] = '\0';
 		}
 	}
+	str[wcount] = NULL;
 	return (str);
 }
+/*
+int main ()
+{
+	char **ret;
+
+	ret = ft_strsplit("", '*');
+	if (ret == NULL)
+		ft_putstr("is NULL");
+	else
+		ft_putstr("not NULL");
+	return (0);
+}*/
