@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 13:44:03 by amaquena          #+#    #+#             */
-/*   Updated: 2019/06/10 16:41:37 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/06/14 12:58:05 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strtrim(char const *s)
 {
-	size_t	end;
-	size_t	start;
-	size_t	n;
+	int		end;
+	int		start;
+	int		n;
 	char	*str;
 
 	if (!s)
@@ -31,15 +31,13 @@ char	*ft_strtrim(char const *s)
 	end = ft_strlen(s) - 1;
 	while (ft_isspace(s[end]))
 		end--;
-	n = 0;
 	if (!(str = ft_strnew(end - start + 1)))
 		return (NULL);
+	n = 0;
 	while (start < end + 1)
-	{
-		str[n] = s[start];
-		start++;
-		n++;
-	}
+		str[n++] = s[start++];
 	str[n] = '\0';
+	if(!(str))
+		return (NULL);
 	return (str);
 }
