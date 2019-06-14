@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 13:44:03 by amaquena          #+#    #+#             */
-/*   Updated: 2019/06/14 12:58:05 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/06/14 16:23:13 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strtrim(char const *s)
 	{
 		start++;
 		if (s[start] == '\0')
-			return ("");
+			return (ft_strdup(""));
 	}
 	end = ft_strlen(s) - 1;
 	while (ft_isspace(s[end]))
