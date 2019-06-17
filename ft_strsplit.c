@@ -6,7 +6,7 @@
 /*   By: amaquena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 16:11:53 by amaquena          #+#    #+#             */
-/*   Updated: 2019/06/14 17:24:06 by amaquena         ###   ########.fr       */
+/*   Updated: 2019/06/17 17:41:57 by amaquena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,14 +77,15 @@ char			**ft_strsplit(char const *s, char c)
 	return (str);
 }
 /*
-int main ()
-{
-	char **ret;
-
-	ret = ft_strsplit("", '*');
-	if (ret == NULL)
-		ft_putstr("is NULL");
-	else
-		ft_putstr("not NULL");
-	return (0);
-}*/
+**int main ()
+**{
+**	char **ret;
+**
+**	ret = ft_strsplit("", '*');
+**	if (ret == NULL)
+**		ft_putstr("is NULL");
+**	else
+**		ft_putstr("not NULL");
+**	return (0);
+**}
+*/
