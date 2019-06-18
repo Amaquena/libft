@@ -9,18 +9,19 @@ OFILES = ft_strlen.o ft_strdup.o ft_strcpy.o ft_strncpy.o ft_strcat.o ft_strncat
 		 ft_isspace.o ft_numlen.o
 
 $(NAME):
-	gcc -c -Wall -Wextra -Werror $(CFILES)
-	ar rcs $(NAME) $(OFILES)
-	ranlib $(NAME)
+	@gcc -c -Wall -Wextra -Werror $(CFILES)
+	@ar rcs $(NAME) $(OFILES)
+	@ranlib $(NAME)
 
 all: $(NAME)
 clean:
-	rm -f $(OFILES)
+	@rm -f $(OFILES)
 fclean: clean
-	rm -f $(NAME)
-	rm -f a.out
+	@rm -f $(NAME)
+	@rm -f a.out
 re: fclean all
-
-gcc:
+	@echo "fclean / clean / all"
+	@echo "_______________________________________________\n"
+gcc: re
 	@gcc main.c $(NAME)
 	@./a.out
