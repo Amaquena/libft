@@ -61,3 +61,22 @@ The libft project allows us to build on concepts i.e. how to code a C library an
 >- ft_putstr_fd
 >- ft_putendl_fd
 >- ft_putnbr_fd
+
+## Bonus Section
+**This section we'll be focusing in creating and minupulating a linked list. We’ll use the following structure to represent the links of the list. This structure must be added to your libft.h file.**
+```
+typedef struct			s_list
+{
+	void			*content;
+	int			content_size;
+	struct s_list		*next;
+}				t_list;
+```
+
+#### List of funtion for the bonus part
+>- ft_lstnew
+>- ft_lstdelone
+>- ft_lstdel
+>- ft_lstadd
+>- ft_lstiter
+>- ft_lstmap
